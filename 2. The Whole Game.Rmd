@@ -1,0 +1,52 @@
+---
+title: "2. The Whole Game.rmd"
+author: "Russ Conte"
+date: "2022-12-12"
+output: html_document
+---
+
+## 2.1 Introduction
+
+This chapter runs through the development of a small toy package. It’s meant to paint the Big Picture and suggest a workflow, before we descend into the detailed treatment of the key components of an R package.
+
+## 2.2 Load `devtools` and friends
+
+Load the `devtools` package, which is the public face of a set of packages that support various aspects of package development. The most obvious of these is the usethis package, which you’ll see is also being loaded.
+
+```{r Load devtools}
+
+library(devtools)
+
+```
+
+Verify that I'm using the same version of devtools as the authors:
+
+```{r Verify this is the same system of devtools as the authors}
+
+packageVersion("devtools")
+
+```
+
+I'm using version 2.4.5, the same as the version used by the authors.
+
+## 2.3 Toy package: regexcite
+
+We use various functions from devtools to build a small toy package from scratch, with features commonly seen in released packages:
+
+- Functions to address a specific need, in this case helpers for work with regular expressions.<br>
+    - Version control and an open development process.<br>
+    - This is completely optional in your work, but highly recommended. You’ll see how Git and GitHub help us expose all the intermediate stages of our toy package.<br>
+-`Access to established workflows for installation, getting help, and checking quality.<br>
+    - Documentation for individual functions via roxygen2.<br>
+    - Unit testing with testthat.<br>
+    - Documentation for the package as a whole via an executable README.Rmd.<br>
+We call the package *regexcite* and it will have a couple functions that make common tasks with regular expressions easier. Please note that these functions are super simple and definitely not the point! For real work, there are several proper R packages that address this problem space.
+
+## 2.4 Peek at the finished product
+
+You can see the glorious result we are working towards by visiting regexcite on GitHub: [https://github.com/jennybc/regexcite](you can see the glorious result we are working towards by visiting regexcite on GitHub: https://github.com/jennybc/regexcite)
+
+## 2.5 `create_package()`
+
+Call `create_package()` to initialize a new package in a directory on your computer. `create_package()` will automatically create that directory if it doesn’t exist yet (and that is usually the case).
+
