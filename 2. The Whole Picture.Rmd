@@ -40,3 +40,8 @@ We use various functions from devtools to build a small toy package from scratch
     - Documentation for individual functions via roxygen2.<br>
     - Unit testing with testthat.<br>
 Documentation for the package as a whole via an executable README.Rmd.
+
+## 2.4 Peeking at the finished product:
+
+You can see the glorious result we are working towards by visiting regexcite on GitHub: [https://github.com/jennybc/regexcite](you can see the glorious result we are working towards by visiting regexcite on GitHub: https://github.com/jennybc/regexcite).
+
