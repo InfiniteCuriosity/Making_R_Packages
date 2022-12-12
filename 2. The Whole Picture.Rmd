@@ -31,3 +31,12 @@ I'm using devtools version 2.4.5, and that's the same as the author's version.
 
 ## 2.3 Toy package: regexcite
 
+We use various functions from devtools to build a small toy package from scratch, with features commonly seen in released packages:
+
+-   Functions to address a specific need, in this case helpers for work with regular expressions.<br>
+        - Version control and an open development process.<br>
+        - This is completely optional in your work, but highly recommended. You’ll see how Git and GitHub help us expose all the intermediate stages of our toy package.<br>
+-   Access to established workflows for installation, getting help, and checking quality.<br>
+    - Documentation for individual functions via roxygen2.<br>
+    - Unit testing with testthat.<br>
+Documentation for the package as a whole via an executable README.Rmd.
