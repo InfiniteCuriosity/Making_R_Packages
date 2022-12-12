@@ -42,3 +42,8 @@ We use various functions from devtools to build a small toy package from scratch
 ## 2.4 Peek at the finished product
 
 You can see the glorious result we are working towards by visiting regexcite on [GitHub](https://github.com/jennybc/regexcite)
+
+## 2.5 'create_package()`
+
+Call `create_package()` to initialize a new package in a directory on your computer. `create_package()` will automatically create that directory if it doesn’t exist yet (and that is usually the case).
+
