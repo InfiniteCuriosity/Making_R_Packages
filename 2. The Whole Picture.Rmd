@@ -1,0 +1,33 @@
+---
+title: "2. The Whole Game.rmd"
+author: "Russ Conte"
+date: "2022-12-12"
+output: html_document
+---
+
+## 2.1 Introduction
+
+This chapter runs through the development of a small toy package. It’s meant to paint the Big Picture and suggest a workflow, before we descend into the detailed treatment of the key components of an R package.
+
+## 2.2 Load devtools and friends
+
+Load the `devtools` package, which is the public face of a set of packages that support various aspects of package development. The most obvious of these is the `usethis` package, which you’ll see is also being loaded.
+
+```{r Load the devtools package}
+
+library(devtools)
+
+```
+
+Check the version of devtools that is on my computer, see if it's the same as the author's version:
+
+```{r Check version of devtools on my computer}
+
+packageVersion("devtools")
+
+```
+
+I'm using devtools version 2.4.5, and that's the same as the author's version.
+
+## 2.3 Toy package: regexcite
+
