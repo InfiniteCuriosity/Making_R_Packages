@@ -1,0 +1,20 @@
+---
+title: "3. System Setup.rmd"
+author: "Russ Conte"
+date: "2022-12-13"
+output: html_document
+---
+## 3.1 Prepare your system
+
+To get started, make sure you have the latest version of R (at least 4.2.2, which is the version being used to render this book), then run the following code to get the packages you’ll need:
+
+```{r}
+install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
+```
+
+```{r}
+
+devtools::dev_sitrep()
+
+```
+
