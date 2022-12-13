@@ -12,9 +12,57 @@ To get started, make sure you have the latest version of R (at least 4.2.2, whic
 install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
 ```
 
+Example of how to simulate installing and loading a package, during interactive development:
+
+```{r}
+
+library(devtools)
+load_all()
+
+```
+
+## 3.2.1 Personal Configuration
+
+Attach devtools as follows:
+
+```{r}
+
+library(devtools)
+```
+
+## 3.3 R build toolchain
+
+To be fully capable of building R packages from source, you’ll also need a compiler and a few other command line tools. This may not be strictly necessary until you want to build packages containing C or C++ code. Especially if you are using RStudio, you can set this aside for now. The IDE will alert you and provide support once you try to do something that requires you to setup your development environment. Read on for advice on doing this yourself.
+
+## 3.3.4 Verify system prep :) (an excellent idea!!)
+
+You can request a “(package) development situation report” with `devtools::dev_sitrep()`:
+
 ```{r}
 
 devtools::dev_sitrep()
 
 ```
 
+Interesting response from R:
+
+devtools or its dependencies out of date:
+  'evaluate'
+  Update them with `devtools::update_packages("devtools")`── dev package 
+  
+Therefore:
+
+```{r}
+
+devtools::update_packages("devtools")
+
+```
+
+Now repeat the package situation report, to test if the system is current:
+
+```{r}
+
+devtools::dev_sitrep()
+```
+
+All checks passed, good so far!!
